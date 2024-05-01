@@ -10,9 +10,9 @@ import {
   Header,
   ControlsContainer,
   ContainerInfoEployees,
-  ErrorMessage,
   CustomButton,
 } from "./styles";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 const EmployeesList = () => {
   const {
@@ -69,7 +69,7 @@ const EmployeesList = () => {
           </ContainerInfoEployees>
         )}
 
-        {isError && (
+        {(isError as any) && (
           <ErrorMessage>
             Ops ocorreu um erro ao carregar os funcionários, tente novamente
             depois!

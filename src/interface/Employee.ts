@@ -1,25 +1,17 @@
-enum Gender {
-  Male = "Male",
-  Female = "Female",
-  Other = "Other",
-}
-
-interface EPI {
-  EPI: string;
-  activity: string;
-  numberCA: string;
-}
-
 export interface Employee {
   id: number;
   name: string;
   cpf: string;
   rg: string;
-  gender: Gender;
-  dateOfBirth: Date;
+  genre: string;
+  dateOfBirth: string;
   empPosition: string;
   usesEPI: boolean;
-  EPIS: EPI[];
+  EPIS: Array<{
+    EPI: string;
+    activity: string;
+    numberCA: string;
+  }>;
   medicalCertificateFile: string | null;
   isActive: boolean;
 }

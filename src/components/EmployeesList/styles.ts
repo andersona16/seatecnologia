@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-interface ControlsContainerProps {
-  showOnlyActiveEmployees: boolean;
-}
-
 export const DashboardContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -23,7 +19,7 @@ export const Header = styled.header`
   }
 `;
 
-export const ControlsContainer = styled.div<ControlsContainerProps>`
+export const ControlsContainer = styled.div`
   padding: 16px 24px 16px 24px;
   display: flex;
   flex-direction: column;
@@ -84,13 +80,6 @@ export const ContainerInfoEployees = styled.div`
   height: 100%;
   width: 100%;
   margin-top: 20px;
-`;
-
-export const ErrorMessage = styled.div`
-  height: 180px;
-  width: 100%;
-  margin-top: 5px;
-  color: #ff0000;
 `;
 
 export const SwitchContainer = styled.div`
