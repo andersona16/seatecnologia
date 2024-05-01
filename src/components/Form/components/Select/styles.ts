@@ -54,18 +54,16 @@ export const Viewport = styled(RdxSelect.Viewport)`
 `;
 
 export const Item = styled(RdxSelect.Item)`
-  ${({ value }) => css`
-    &[data-state="checked"] {
-      font-weight: bold;
-    }
-    &[data-highlighted] {
-      background-color: var(--gray-50);
-    }
-    border-radius: 8px;
-    outline: none;
-    padding: 0.5rem;
-    font-size: 0.875rem;
-  `}
+  &[data-state="checked"] {
+    font-weight: bold;
+  }
+  &[data-highlighted] {
+    background-color: var(--gray-50);
+  }
+  border-radius: 8px;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 0.875rem;
 `;
 
 export const ScrollDownButton = styled(RdxSelect.ScrollDownButton)`
