@@ -1,35 +1,18 @@
-import { Outlet, Route, Routes } from "react-router-dom";
-import MyLayout from "../components/layouts/MainLayout";
-import { ShortlyRoute } from "./ShortlyRoute";
-import ShortlyLayout from "../components/layouts/ShortlyLayout";
-import MainLayout from "../components/layouts/MainLayout";
+import { Route, Routes } from "react-router-dom";
+import Dashboard from "../pages/Dashboard";
+import ComingSoonPage from "../components/ComingSoonPage";
 
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route
-        element={
-          <ShortlyRoute>
-            <ShortlyLayout>d</ShortlyLayout>
-          </ShortlyRoute>
-        }
-      >
-        <Route path="/tela-em-breve-1" element={<ShortlyLayout />} />
-        <Route path="/tela-em-breve-2" element={<ShortlyLayout />} />
-        <Route path="/tela-em-breve-3" element={<ShortlyLayout />} />
-        <Route path="/tela-em-breve-4" element={<ShortlyLayout />} />
-        <Route path="/tela-em-breve-5" element={<ShortlyLayout />} />
-      </Route>
-
-      <Route
-        element={
-          <MainLayout>
-            <Outlet />
-          </MainLayout>
-        }
-      >
-        <Route />
-      </Route>
+      <Route path="/" element={<Dashboard />} />
+      {[1, 2, 3, 4, 5].map((number) => (
+        <Route
+          key={number}
+          path={`/em-breve-${number}`}
+          element={<ComingSoonPage />}
+        />
+      ))}
     </Routes>
   );
 };
